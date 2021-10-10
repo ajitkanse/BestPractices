@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.kanse.myapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_priceListFragment"
+            app:destination="@id/priceListFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_registrationFormFragment"
+            app:destination="@id/registrationFormFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_patientReportFragment"
+            app:destination="@id/patientReportFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_hospitalListFragment"
+            app:destination="@id/hospitalListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_covid"
+        android:name="com.kanse.myapp.ui.covid.CovidFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.kanse.myapp.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.kanse.myapp.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/navigation_wallet"
+        android:name="com.kanse.myapp.ui.wallet.WalletFragment"
+        android:label="Wallet"
+        tools:layout="@layout/fragment_wallet" />
+    <fragment
+        android:id="@+id/priceListFragment"
+        android:name="com.kanse.myapp.ui.PriceListFragment"
+        android:label="PriceListFragment" />
+    <fragment
+        android:id="@+id/registrationFormFragment"
+        android:name="com.kanse.myapp.ui.RegistrationFormFragment"
+        android:label="RegistrationFormFragment" />
+    <fragment
+        android:id="@+id/patientReportFragment"
+        android:name="com.kanse.myapp.ui.report.patient.PatientFragment"
+        android:label="PatientReportFragment" >
+        <action
+            android:id="@+id/action_patientReportFragment_to_patientReportFragment2"
+            app:destination="@id/patientReportFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientReportFragment2"
+        android:name="com.kanse.myapp.ui.report.PatientReportFragment"
+        android:label="PatientReportFragment" />
+    <fragment
+        android:id="@+id/hospitalListFragment"
+        android:name="com.kanse.myapp.ui.hospital.HospitalListFragment"
+        android:label="HospitalListFragment" />
+</navigation>
